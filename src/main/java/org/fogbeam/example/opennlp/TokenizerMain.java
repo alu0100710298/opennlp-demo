@@ -9,10 +9,19 @@ import opennlp.tools.tokenize.Tokenizer;
 import opennlp.tools.tokenize.TokenizerME;
 import opennlp.tools.tokenize.TokenizerModel;
 
-
-public class TokenizerMain
-{
-
+/**
+ * Clase TokernizerMain del proyecto OpenNLP
+ * Procesamiento de uno o más ficheros, sepranado en tokens y almacenadolos en un fichero
+ * @author Sergio Moreno Martín - alu0100710298
+ */
+public class TokenizerMain {
+	/**
+	 * Obtienes los token que forman el un fichero de entrada
+	 * @param pw
+	 * @param b
+	 * @param tokenizer
+	 * @throws IOException
+	 */
 	public static void Tokenizer(PrintWriter pw, BufferedReader b, Tokenizer tokenizer)throws IOException{
 		String cadena;
 		while((cadena = b.readLine())!=null){
@@ -24,12 +33,24 @@ public class TokenizerMain
 		}
 	}
 
+	/**
+	 * Método para mostrar las instrucciones al usuario
+	 * @param aux
+	 * @return
+	 */
 	public static String LeerFichero (String aux){
 		System.out.println(" ");
 		System.out.println("Introduce el nombre del fichero: ");
 		System.out.println("Si quiere salir puelse 's'");
 		return aux;
 	}
+
+	/**
+	 * Main del programa.
+	 * Se inicializan las variables y se llaman a las funciones LeerFichero y Tokenizer
+	 * @param args
+	 * @throws Exception
+	 */
 	public static void main( String[] args ) throws Exception
 	{
 
